@@ -16,7 +16,7 @@ public class Card_Driver {
 	//Array for the deck of cards, 52 (the deck) - Creating the Deck of Cards
 	Card[] cardDeck = new Card[52];
 
-	//Initialize card objects in the array and prints the array
+	//Initialize card objects in the array and print the array
 	for (int i = 0; i < cardDeck.length; i++) {
         cardDeck[i] = new Card(i + 1); // Initialize each card with appropriate card number
     }
@@ -28,7 +28,7 @@ public class Card_Driver {
             if (index < cardDeck.length) {
                 System.out.printf("%-5s", cardDeck[index]); // Print each card
             } else {
-                break; // Break the loop if index exceeds the length of the cardDeck array
+                break; // Break the loop if the index exceeds the length of the card deck array
             }
         }
         System.out.println("\n"); // Start a new line after printing each row
