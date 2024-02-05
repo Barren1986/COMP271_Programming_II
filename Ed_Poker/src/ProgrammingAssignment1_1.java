@@ -26,29 +26,29 @@ public class ProgrammingAssignment1_1 {
 	printCardDeck(cardDeck);
 	
 	//Create 2 player objects
-		Player player1 = new Player("Player 1: ", "Beckett's", 1000);
-		Player player2 = new Player("Player 2: ", "Mathius's", 1000);
+	Player player1 = new Player("Player 1: ", "Beckett's  ", 1000);
+	Player player2 = new Player("Player 2: ", "Mathius's ", 1000);
 
-		//Create 2 arrays of type Cards (one for each player) with size 5
-		Card[] playerHand1 = new Card[5];
-		Card[] playerHand2 = new Card[5];
+	//Create 2 arrays of type Cards (one for each player) with size 5
+	Card[] playerHand1 = new Card[5];
+	Card[] playerHand2 = new Card[5];
 		
-		//Deal 5 card hand by using modulus
-		for(int i = 0; i < 10; i++) {
-			int playerHands = i % 2;
-			if(playerHands == 0) {
-				// even
-				playerHand1[i/2] = cardDeck[i];
-			} else {
-				//odd
-				playerHand2[i/2] = cardDeck[i];
+	//Deal 5 card hand by using modulus
+	for(int i = 0; i < 10; i++) {
+		int playerHands = i % 2;
+		if(playerHands == 0) {
+			// even
+			playerHand1[i/2] = cardDeck[i];
+		} else {
+			//odd
+			playerHand2[i/2] = cardDeck[i];
 			}
 			
 		}
 
-		//Print the player name and the corresponding hand
-		printHand(playerHand1, player1);
-		printHand(playerHand2, player2);
+	//Print the player name and the corresponding hand
+	printHand(playerHand1, player1);
+	printHand(playerHand2, player2);
 	
 	}
 	
@@ -73,11 +73,11 @@ public class ProgrammingAssignment1_1 {
         	}
         }
 
-	}	
+	}
 	
 	public static void printHand( Card[] hand, Player player) {
 		String playerName = player.getName();
-		System.out.println("\n\n" + playerName + "'s Hand: " );
+		System.out.println("\n\n" + playerName + "Hand: " );
 		
 		for (int i = 0; i < hand.length; i++) {
 			System.out.print(hand[i] + "\t");

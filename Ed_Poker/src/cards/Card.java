@@ -3,7 +3,7 @@
 package cards;
 
 // This are all the attributes of the Card class
-	public class Card {
+public class Card {
 	private int cardNumber;
 	private String suit;
 	private int suitIndex;
@@ -11,28 +11,25 @@ package cards;
 	private int cardRank;
 	private String face;
 	private String cardImage;
-	private int cardsCreated;
+	private static int cardsCreated;
 	
 //These are the methods that will be the actions(behavior) of the Card class	
 	public Card(int cardNumber) {
 		this.cardNumber = cardNumber;
 		createCard();
-		cardNumber++; //Increases cardNumber by 1
 	}
 
 //This method is used to create the cards in the deck
 	private void createCard() {
 		this.suitIndex = (cardNumber - 1) / 13;
 		this.cardRank = ((cardNumber - 1) % 13) + 1; //Makes it so that the cardNumber starts at 1 and that it will make the rank 1 to 13.
-		this.face = getFaceFromRank(cardRank);
-		this.cardImage = cardImage;
-		this.cardsCreated++; //Created one card at a time
 		setSuit();
 		setRank();
+		cardNumber++; //Increases cardNumber by 1
 	}
 	
 	private void setSuit() {
-	switch (suitIndex) {
+		switch (suitIndex) {
 		case 0:
 			this.suit = "s";
 			this.color = "b";
@@ -53,10 +50,10 @@ package cards;
 	}
 	
 	private void setRank() {
-	switch (cardRank) {
+		switch (cardRank) {
 		case 1:
 			this.face = "A";
-			break;
+				break;
 		case 2:
 		case 3:
 		case 4:
@@ -66,25 +63,21 @@ package cards;
 		case 8:
 		case 9:
 			this.face = Integer.toString(cardRank);
-			break;
+				break;
 		case 10:
 			this.face = "T";
-			break;
+				break;
 		case 11:
 			this.face = "J";
-			break;
+				break;
 		case 12:
 			this.face = "Q";
-			break;
+				break;
 		case 13:
 			this.face = "K";
-			break;
+				break;
 	}
 }
-	
-	private String getFaceFromRank(int cardRank) {
-		return face;
-	}
 
 	public String toString() {
 		return face + suit;
@@ -146,11 +139,13 @@ package cards;
 		this.cardImage = cardImage;
 	}
 
-	public int getCardsCreated() {
+	public static int getCardsCreated() {
 		return cardsCreated;
 	}
 
-	public void setCardsCreated(int cardsCreated) {
-		this.cardsCreated = cardsCreated;
+	public static void setCardsCreated(int cardsCreated) {
+		Card.cardsCreated = cardsCreated;
 	}
 }
+
+
