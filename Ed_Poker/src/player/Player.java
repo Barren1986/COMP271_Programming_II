@@ -31,10 +31,6 @@ public class Player {
 		return hand;
 	}
 
-	public void setHand(Hand hand) { // This sets the Hand for use by the Player
-		this.hand = hand;
-	}
-
 	public int getBank() {
 		return bank;
 	}
