@@ -4,13 +4,13 @@ package cards;
 
 // This are all the attributes of the Card class
 public class Card {
-	private int cardNumber;
+	protected int cardNumber;
 	private String suit;
 	private int suitIndex;
-	private String color;
+	protected String color;
 	private int cardRank;
-	private String face;
-	private String cardImage;
+	protected String face;
+	protected String cardImage;
 	private static int cardsCreated;
 	
 //These are the methods that will be the actions(behavior) of the Card class	
@@ -20,7 +20,7 @@ public class Card {
 	}
 
 //This method is used to create the cards in the deck
-	private void createCard() {
+	protected void createCard() {
 		this.suitIndex = (cardNumber - 1) / 13;
 		this.cardRank = ((cardNumber - 1) % 13) + 1; //Makes it so that the cardNumber starts at 1 and that it will make the rank 1 to 13.
 		setSuit();

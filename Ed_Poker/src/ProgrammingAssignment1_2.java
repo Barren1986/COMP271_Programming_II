@@ -114,8 +114,6 @@ public class ProgrammingAssignment1_2 {
 		
 	}
 	
-	
-		
 	// Method to print player's hand
 	public static void printHand( Card[] hand, Player player) {
 		String playerName = player.getName();
@@ -160,7 +158,6 @@ public class ProgrammingAssignment1_2 {
         	System.out.print("\n"); // Start a new line after printing each row
         	}
         }
-
 	}
 	
 	
