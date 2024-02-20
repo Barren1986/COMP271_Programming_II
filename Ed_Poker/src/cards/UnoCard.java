@@ -2,10 +2,10 @@ package cards;
 
 public class UnoCard extends Card {
 	
-	boolean reverse;
-	int drawAmount;
-	boolean wild;
-	boolean skip;
+	private boolean reverse;
+	private int drawAmount;
+	private boolean wild;
+	private boolean skip;
 	
 	// Constructor to initialize UnoCard object
 	public UnoCard(int cardNumber) {
@@ -17,7 +17,7 @@ public class UnoCard extends Card {
 		return reverse;
 	}
 	
-	protected int getDrawAmount() {
+	public int getDrawAmount() {
 		return drawAmount;
 	}
 	
@@ -37,10 +37,10 @@ public class UnoCard extends Card {
 		this.skip = skip;
 	}
 
-	protected boolean isWild() {
+	public boolean isWild() {
 		return wild;
 	}
-	protected boolean isSkip() {
+	public boolean isSkip() {
 		return skip;
 	}
 

@@ -143,6 +143,7 @@ public class ProgrammingAssignment1_2 {
     for (int i = cardDeck.length - 1; i >= 0; i--) {
     	// Generate a random index within the range of the deck
     	randomIndex = (int)(Math.random() * cardDeck.length);
+    	
     	// Swap the current card with a card at the random index
     	temp = cardDeck[i];
     	cardDeck[i] = cardDeck[randomIndex];
