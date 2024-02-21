@@ -28,23 +28,23 @@ public class Assignment2_1 {
         
         // Shuffle the standard deck of cards
         shuffleDeck(cardDeck);
-        System.out.println("");
+        System.out.println();
         
         // Print the shuffled standard deck of cards
         System.out.println("Shuffled Standard Deck");
         printDeck(cardDeck);
         
         // Print the unshuffled Uno deck of cards
-        System.out.println("");
+        System.out.println();
         System.out.println("Standard Uno Deck");
         printDeck(unoDeck);
         
         // Shuffle the Uno deck of cards
         shuffleDeck(unoDeck);
-        System.out.println("");
+        System.out.println();
         
         // Print the shuffled Uno deck of cards
-        System.out.println("");
+        System.out.println();
         System.out.println("Shuffled Uno Deck");
         printDeck(unoDeck);
         

@@ -5,9 +5,9 @@ import cards.Card;
 
 public class Deck {
 	// ArrayList to hold the cards in the deck
-    private ArrayList<Card> cards;
+    private final ArrayList<Card> cards;
     // ArrayList to hold the cards that have been used
-    private ArrayList<Card> usedCards;
+    private final ArrayList<Card> usedCards;
     
     // Constructor to create a new deck with a specified size
     public Deck(int deckSize) {

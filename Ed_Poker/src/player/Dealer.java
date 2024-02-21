@@ -5,7 +5,7 @@ import deck.Deck;
 import hand.Hand;
 
 public class Dealer extends Player{
-	private Deck deck;
+	private final Deck deck;
 	
 	public Dealer(Deck deck) {
 		super("dealer", "Dealer" + randomDealer(), 0);

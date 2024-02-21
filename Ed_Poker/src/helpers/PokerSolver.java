@@ -5,8 +5,8 @@ import java.util.Arrays;
 import hand.Hand;
 
 public class PokerSolver {
-	private static String[] cardFaces = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"};
-	private static String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"};
+	private static final String[] cardFaces = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"};
+	private static final String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"};
 	private static int[] handFace;
 	private static int[] handSuit;
 	private static int handScore = 0;
@@ -351,7 +351,7 @@ public class PokerSolver {
 		aceTwo = false;
 		
 		//Check if ace exists, since it could be A, 2, ... or ...Q, K, A
-		hasAce = (handFace[handFace.length-1] == 14) ? true : false;
+		hasAce = handFace[handFace.length - 1] == 14;
 		
 		if(deuces == 0) {
 			for(int i=0; i<handFace.length; i++) {
@@ -383,7 +383,7 @@ public class PokerSolver {
 				}
 			}
 			 
-			straight = (deucesCount >=0) ? true : false;
+			straight = deucesCount >= 0;
 			
 			if(hasAce && !straight) {
 //				int tempAce = nonWilds[nonWilds.length-1];
@@ -399,8 +399,8 @@ public class PokerSolver {
 					}
 				}
 				 
-				straight = (deucesCount >=0) ? true : false;
-				aceTwo = straight ? true : false;
+				straight = deucesCount >= 0;
+				aceTwo = straight;
 			}
 		}
 		
@@ -535,10 +535,8 @@ public class PokerSolver {
 
 	private static String[] sortHandString(String[] cards) {
 		String[] sortedCards = new String[cards.length];
-		
-		for(int i=0; i<cards.length; i++) {
-			sortedCards[i] = cards[i];
-		}
+
+		System.arraycopy(cards, 0, sortedCards, 0, cards.length);
 		Arrays.sort(sortedCards);
 		
 		return sortedCards;

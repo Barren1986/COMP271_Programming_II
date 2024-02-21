@@ -5,8 +5,8 @@ import hand.Hand;
 
 // Attributes of the Player Class
 public class Player {
-	private String id;
-	private String name;
+	private final String id;
+	private final String name;
 	private int bank;
 	private Hand hand; // Aggregate relationship between Hand and Player class
 	

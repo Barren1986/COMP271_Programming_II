@@ -6,7 +6,7 @@ import helpers.PokerSolver;
 import deck.Deck;
 
 public class Hand {
-	private ArrayList<Card> cards;
+	private final ArrayList<Card> cards;
 	
 	//For use by the PokerSolver
 	private String handDescr = "";
